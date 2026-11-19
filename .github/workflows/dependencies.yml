@@ -1,7 +1,7 @@
 name: Dependencies Example
 
 on:
-  workflow_checkout
+  workflow_dispatch:
 
 jobs:
   dependencies:
@@ -11,10 +11,10 @@ jobs:
      
 
       - name: checkout
-        uses: actions/node.js@v4
+        uses: actions/checkout@v4
 
       - name: Setup Node.js environment
-        run: actions/setup-node@4.4.0
+        uses: actions/setup-node@4.4.0
 
       - name: install nmp
         run: npm install
