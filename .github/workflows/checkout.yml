@@ -1,7 +1,7 @@
 name: Checkout Example
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
 
 jobs:
   example:
@@ -9,5 +9,7 @@ jobs:
 
     steps:
       - name: stap1
-        uses: actions/checkout
-      - run: ls -alhR
+        uses: actions/checkout@v7
+
+      - name: stap2
+        run: ls -alhR
