@@ -8,6 +8,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+      - name: Controleer of key beschikbaar is
+        env:
+          MIJN_SLEUTEL: ${{SECRET_KEY}}
+          run: |
+            if [ -n "$MIJN_SLEUTEL" ]; then
+              echo "Het secret is beschikbaar."
+            else
+              echo "Het secret ontbreekt of is leeg."
+              exit 1
+
       - name: Checkout
         uses: actions/checkout@v4
 
