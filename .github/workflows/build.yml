@@ -11,7 +11,7 @@ jobs:
 
       - name: Controleer of key beschikbaar is
         env:
-          MIJN_SLEUTEL: ${{SECRET_KEY}}
+          MIJN_SLEUTEL: ${{secrets.SECRET_KEY}}
           run: |
             if [ -n "$MIJN_SLEUTEL" ]; then
               echo "Het secret is beschikbaar."
