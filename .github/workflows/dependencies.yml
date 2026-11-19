@@ -1,7 +1,7 @@
 name: Dependencies Example
 
 on:
-  workflow_checkout:
+  workflow_checkout
 
 jobs:
   dependencies:
