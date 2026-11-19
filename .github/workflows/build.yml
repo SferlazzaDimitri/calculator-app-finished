@@ -16,7 +16,7 @@ jobs:
             echo "Het secret is beschikbaar."
           else
             echo "Het secret ontbreekt of is leeg."
-            
+          fi  
 
       - name: Checkout
         uses: actions/checkout@v4
