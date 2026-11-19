@@ -31,3 +31,6 @@ jobs:
 
       - name: Maak een zip van de applicatie
         run: zip -r app.zip . -x ".git/*" ".github/*"
+
+      - name: Voer unittests uit en maak een rapport
+        run: npm test 
