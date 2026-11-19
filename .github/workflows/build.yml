@@ -1,0 +1,23 @@
+name: Build Example
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+     
+
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@4.4.0
+
+      - name: install nmp
+        run: npm install
+
+     - name: Maak een zip van de applicatie
+       run: zip -r app.zip . -x ".git/*" ".github/*"
