@@ -5,17 +5,19 @@ on:
 
 jobs:
   dependencies:
-    runs-on: ubuntu-latest:
+    runs-on: ubuntu-latest
 
     steps:
-      - name: install nmp
-        run: npm install
+     
 
       - name: checkout
         uses: actions/node.js@v4
 
       - name: Setup Node.js environment
         run: actions/setup-node@4.4.0
+
+      - name: install nmp
+        run: npm install
 
       - name: verification
         run: ls -alhR
