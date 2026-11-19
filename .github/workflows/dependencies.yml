@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-latest:
 
     steps:
+      - name: install nmp
+        run: npm install
+
       - name: checkout
         uses: actions/node.js@v4
 
