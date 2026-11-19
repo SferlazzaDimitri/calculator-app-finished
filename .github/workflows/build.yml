@@ -15,9 +15,11 @@ jobs:
 
       - name: Setup Node.js environment
         uses: actions/setup-node@4.4.0
+        with:
+          node-version: '20'
 
       - name: install nmp
         run: npm install
 
-     - name: Maak een zip van de applicatie
-       run: zip -r app.zip . -x ".git/*" ".github/*"
+      - name: Maak een zip van de applicatie
+        run: zip -r app.zip . -x ".git/*" ".github/*"
