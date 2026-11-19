@@ -1,0 +1,18 @@
+name: Dependencies Example
+
+on:
+  workflow_checkout:
+
+jobs:
+  dependencies:
+    runs-on: ubuntu-latest:
+
+    steps:
+      - name: checkout
+        uses: actions/node.js@v4
+
+      - name: Setup Node.js environment
+        run: actions/setup-node@4.4.0
+
+      - name: verification
+        run: ls -alhR
