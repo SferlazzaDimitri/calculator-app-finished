@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: stap1
         uses: actions/checkout
-        run: ls -alhR
+      - run: ls -alhR
